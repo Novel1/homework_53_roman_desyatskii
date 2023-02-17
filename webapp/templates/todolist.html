@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Todolist{% endblock %}
+{% block content %}
+    <container class="container-list" style="max-width: 2000px; margin: auto;  height: 1000px;">
+<div class="p" style="margin-left: 100px;">
+    {% for todolist in todo %}
+        <hr>
+        <h3><p>{{ todolist.title }}</p></h3>
+        <a href="{% url 'inform' todolist.pk %}">Подробная информация...</a>
+    {% endfor %}
+</div>
+</container>
+{% endblock %}

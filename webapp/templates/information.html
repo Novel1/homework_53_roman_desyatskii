@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Inform{% endblock %}
+{% block content %}
+    <div class="list" style="margin-left: 100px;">
+        <hr>
+        <h3><p>{{ todo.title }}</p></h3>
+        <p>{{ todo.description }}</p>
+        <h3><p>{{ todo.status }}</p></h3>
+        <p>{{ todo.created_at }}</p>
+</div>
+{% endblock %}

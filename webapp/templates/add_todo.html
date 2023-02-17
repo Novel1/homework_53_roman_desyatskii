@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Add{% endblock %}
+{% block content %}
+    <form action="/add" method="post" style="margin-left: 500px">
+    {% csrf_token %}
+    <div class="container">
+        <h1 style="margin-top: 20px">Добавление задания</h1>
+        <p>Задание:
+            <input name="title" type="text" style="margin-left: 80px">
+        </p>
+        <p>Статус:
+            <select name="status" style="margin-left: 95px; width: 170px;">
+                <option value="Новая">Новая</option>
+                <option value="Выполняется">В этапе</option>
+                <option value="Сделано">Сделано</option>
+            </select>
+        </p>
+        <p> Описание:
+            <textarea name="description" style="margin-left: 69px; height: 50px"></textarea>
+        </p>
+        <p> Дата:
+            <input name="data" type="text" placeholder="YYYY-mm-dd" style="margin-left: 110px; height: 30px">
+        </p>
+        <button type="submit" class="btn btn-light" style="margin-left: 130px; width: 150px">Добавить</button>
+    </div>
+    </form>
+{% endblock %}
+
